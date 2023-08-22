@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux-toolki/stora";
 import emailjs from '@emailjs/browser';
-// import { useState } from "react";
-// interface Mensaje {
-//   nombre: string;
-//   email: string;
-//   mensage: string;
-// }
+import React, { useState } from "react";
+
+interface Mensaje {
+  nombre: string;
+  email: string;
+  mensage: string;
+}
 export default function Contacto() {
   const darkMode = useSelector((state: RootState) => state.detalle.value);
 
@@ -75,33 +76,49 @@ export default function Contacto() {
     },
   ];
 
-  // const [contact, setContact] =  useState<Mensaje>({
-  //   nombre: '',
-  //   email: '',
-  //   mensage: ''
-  // })
+  const [contact, setContact] =  useState<Mensaje>({
+    nombre: '',
+    email: '',
+    mensage: ''
+  })
+
+  const hanledOnchange = (E: React.ChangeEvent<HTMLInputElement>) => {
+    const {name, value} = E.target
+    setContact({
+      ...contact,
+      [name]: value
+    })
+    }
+  
+    const hanledTextarea = (E: React.ChangeEvent<HTMLTextAreaElement>) => {
+      const {name, value} = E.target
+      setContact({
+        ...contact,
+        [name]: value
+      })
+    }
 
   const sendEmail = (E: React.FormEvent<HTMLFormElement>) => {
    E.preventDefault();
    emailjs.sendForm('service_ypa8u7v', 'template_ydf00mb', E.target as HTMLFormElement, '53jTJLFUy_KqBZvJE')
    .then(response => console.log(response));
+   setContact({
+    nombre: '',
+    email: '',
+    mensage: ''
+  })
     
   }
 
-  // const hanledOnchange = (E: React.ChangeEvent<HTMLInputElement>) => {
-  // const {name, value} = E.target
-  // setContact({
-  //   ...contact,
-  //   [name]: value
-  // })
-  // }
+  
+  
 
   return (
     <main className="w-11/12 mt-20 md:mt-0">
       <div className="w-11/12 mx-auto px-4 text-gray-600 md:px-8">
         <div className="w-full ml-8 md:ml-0 flex flex-col gap-12 justify-between lg:flex md:flex-row">
           <div className="w-full md:w-1/2 md:ml-20 ">
-            <p
+            <p  
               className={` text-[23px] md:text-[25px] font-semibold ${
                 darkMode === true ? "text-gray-700" : "text-gray-700"
               }`}
@@ -125,9 +142,10 @@ export default function Contacto() {
               <div>
                 <label className="font-medium">Nombre</label>
                 <input
-                 
+                  onChange={(e) => hanledOnchange(e)}
                   type="text"
                   name="nombre"
+                  value={contact.nombre}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-red-600 shadow-sm rounded-lg"
                 />
@@ -135,8 +153,10 @@ export default function Contacto() {
               <div>
                 <label className="font-medium">Email</label>
                 <input
+                    onChange={(e) => hanledOnchange(e)}
                   type="email"
                   name="email"
+                  value={contact.email}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-red-600 shadow-sm rounded-lg"
                 />
@@ -145,7 +165,9 @@ export default function Contacto() {
               <div>
                 <label className="font-medium">Mensaje</label>
                 <textarea
+                 onChange={(e) => hanledTextarea(e)}
                   required
+                  value={contact.mensage}
                   name="mensage"
                   className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-red-600 shadow-sm rounded-lg"
                 ></textarea>
