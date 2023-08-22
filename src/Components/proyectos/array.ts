@@ -1,7 +1,7 @@
 
 import pokeIma from "../../Imagenes/pokemon.png"
  import instachrf from '../../Imagenes/Instachef.png'
- import portafolio from '../../Imagenes/portafolio.png'
+ import portafolio from '../../Imagenes/Portafolio.png'
 
 export const proyectos = [
     {
