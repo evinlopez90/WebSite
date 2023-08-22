@@ -34,7 +34,7 @@ function Home() {
             <aside className={`flex justify-center  items-center text-blue-400 `}>    
             <h3
           
-            className=  { `  text-[13px]   font-bold text-red-500 }`}>
+            className=  { `  text-[13px]   font-medium text-red-500 }`}>
              Developer Full Stack
             </h3>
             </aside>

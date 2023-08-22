@@ -13,9 +13,7 @@ function Skill() {
   return (
    <Element name='Skill'  className={`w-full flex flex-col items-center  ${darkMode === true ? 'text-white': null }`}>
     <div className=' w-4/5 md:ml-20  '>
-    <h2 className={`text-[25px] font-bold ${darkMode === true ? 'text-white': null }`}>Habilidades</h2>
-    <span className={`text-[14px]  ${darkMode === true ? 'text-gray-500' : null}`}>Mi nivel tegnico</span>
-    
+    <h2 className={`text-[25px] font-bold ${darkMode === true ? 'text-white': null }`}>Habilidades</h2>    
       
      
    

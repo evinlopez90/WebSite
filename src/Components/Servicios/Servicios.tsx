@@ -8,7 +8,7 @@ function Servicios() {
     <div className=" w-11/12 flex flex-col gap-16">
       <dd className={`w-4/5 ml-14 md:ml-28 text-black flex flex-col `}>
        <h1 className={`text-[25px]  font-bold ${darkMode === true ? 'text-white': null}`}>Servicios</h1>
-       <p className="text-[14px] text-gray-700">Servicios que presto</p>
+       
       </dd>
       <dd className={` w-4/5 md:ml-28 flex flex-col  md:flex md:flex-row   m-10 gap-7`}>
        <aside className={`w-64 h-56 hover:opacity-80 rounded-md  p-8 bg-red-500  ${darkMode === true ? '': ''}`}>

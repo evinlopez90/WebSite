@@ -22,7 +22,7 @@ const Card: React.FunctionComponent<Props> =  ({nombre, imagen, subdescripcion, 
 
  return (
    
-<div className={`max-w-sm rounded-xl ${color} ${darkMode === true ? ' shadow-lg shadow-gray-900' : '  shadow-lg shadow-blue-300' }   hover:opacity-90  rounded-sm shadow`}>
+<div className={` rounded-xl ${color} ${darkMode === true ? ' shadow-lg shadow-gray-900' : '  shadow-lg shadow-blue-300' }   hover:opacity-90  rounded-sm shadow`}>
    <aside className='m-8'>
    <a>
     <img src={imagen} alt="" />

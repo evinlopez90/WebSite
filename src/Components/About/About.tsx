@@ -14,7 +14,7 @@ const darkMode = useSelector((state: RootState) => state.detalle.value);
    <div className="flex flex-col items-center   gap-20">
     <header className= {`w-11/12 ml-8 md:w-4/5 md:ml-20   text-[25px]  ${darkMode !== true ? 'text-neutral-900' : 'text-white'}`}>
       <h1 className="font-bold">Acerca de mí</h1>
-      <p className={` text-[14px]  ${darkMode === true ? 'text-gray-500' : 'text-gray-600'}`}>Mini biografia</p>
+     
     </header>
     <div className=" flex flex-col md:ml-3   md:grid  md:grid-cols-2 ">
     <aside className="md:mx-40">
