@@ -24,13 +24,13 @@ function App() {
 
   return (
   
-     <div className={` transition-all duration-500 ease-linear md:pl-10    ${darkMode === true ? 'bg-black' : 'bg-white'}`}>
+     <div className={` transition-all duration-500 ease-linear md:pl-10    ${darkMode === true ? 'bg-[#060B10]' : 'bg-white'}`}>
      
     <Nav />
       <Element name="Home" className=' h-screen flex flex-col justify-center items-center'>
       <Home/>
       </Element>
-      <Element name='Acerca de mí' className={` h-screen mt-60  flex flex-col justify-center items-center ${darkMode === true ? 'bg-black': null}    md:mt-0`} >
+      <Element name='Acerca de mí' className={` h-screen mt-60  flex flex-col justify-center items-center    md:mt-0`} >
         <About/>
       </Element>
       <Element name="Habilidades" className='mt-96 h-screen   flex flex-col justify-center items-center md:mt-0' >
@@ -39,10 +39,10 @@ function App() {
       <Element name='Servicios' className='mt-96 h-screen   flex flex-col justify-center items-center md:mt-0'>
         <Servicios/>
       </Element>
-      <Element name="Proyectos" className="w-11/12   mt-60 h-screen  flex flex-col items-center ml-8 md:ml-10  gap-20 md:mt-0">
+      <Element name="Proyectos" className={`w-11/12   mt-60 h-screen  flex flex-col items-center ml-8 md:ml-10  gap-20 md:mt-0`}>
       
         <div className='w-4/5 flex flex-col '>
-        <h1 className={`font-bold text-[25px] w-full  ${darkMode === true ? 'text-white': null}`}>Proyectos</h1>
+        <h1 className={`font-bold text-[25px] w-full  ${darkMode === true ? 'text-white ': null}`}>Proyectos</h1>
         
         </div>
        <div className=" w-4/5 grid grid-cols-1 gap-4 md:grid-cols-3">

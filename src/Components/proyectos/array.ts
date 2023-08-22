@@ -15,7 +15,7 @@ export const proyectos = [
          "https://cdn.worldvectorlogo.com/logos/redux.svg", "https://cdn.worldvectorlogo.com/logos/nodejs.svg", "https://cdn.worldvectorlogo.com/logos/express-109.svg",
         "https://www.vectorlogo.zone/logos/sequelizejs/sequelizejs-icon.svg"  ],
         enlace: "https://github.com/evinlopez90/PI-Pokemon-main",
-        color: 'bg-gray-900',
+        color: 'bg-red-900',
         deploy: ''
 
     },
@@ -43,7 +43,7 @@ export const proyectos = [
         colaboradores: [],
         enlace: 'https://github.com/FrancoInca/InstaChef-Front.git',
         tegnologias: [""],
-        color: 'bg-gray-900',
+        color: 'bg-yellow-900',
         deploy: 'https://insta-chef.vercel.app/'
     
     },
@@ -54,10 +54,10 @@ export const proyectos = [
         decriccion: "Mi portafolio web. Explora las diferentes sesiones y conoce todo sobre mi en el mundo del desarrollo de software.",
         subdescripcion: "Mi portafolio web. Explora las diferentes sesiones y conoce todo sobre mi en el mundo del desarrollo de software.",
         colaboradores: [],
-        enlace: 'https://github.com/evinlopez90/Portafolio.git',
+        enlace: 'https://github.com/evinlopez90/WebSite.git',
         tegnologias: [""],
-        color: 'bg-gray-900',
-        deploy: 'https://insta-chef.vercel.app/'
+        color: 'bg-orange-900',
+        deploy: 'https://web-site-app.vercel.app/'
     
     }
 ]
