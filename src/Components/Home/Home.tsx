@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import HomeI from "../../Imagenes/about.jpg";
+
 
 import {BsArrowDownShort, BsMouse} from "react-icons/bs"
 
 import { Link, Element } from "react-scroll";
-import { motion } from "framer-motion";
+
 import { RootState } from "../../redux-toolki/stora";
 import { useSelector } from "react-redux";
 

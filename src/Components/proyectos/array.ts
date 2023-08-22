@@ -1,6 +1,5 @@
 
 import pokeIma from "../../Imagenes/pokemon.png"
- import gameApp from "../../Imagenes/gameApp.png"
  import instachrf from '../../Imagenes/Instachef.png'
  import portafolio from '../../Imagenes/portafolio.png'
 

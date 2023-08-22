@@ -1,6 +1,4 @@
 /* eslint-disable prefer-const */
-
-import {BsCheckCircleFill} from "react-icons/bs"
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux-toolki/stora";
 
