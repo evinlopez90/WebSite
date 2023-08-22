@@ -46,10 +46,10 @@ function Home() {
               </p>
            </div>
             <div className="text-[18px] flex justify-center  gap-5 py-5  ">
-            <a href="" className="rounded-md ">
+            <a href="www.linkedin.com/in/evin-lopez" className="rounded-md ">
                <img src="https://cdn-icons-png.flaticon.com/128/2111/2111368.png" alt="" className="w-5 h-5" />
               </a>
-              <a href="" className="rounded-md ">
+              <a href="https://github.com/evinlopez90" className="rounded-md ">
                <img src="https://cdn-icons-png.flaticon.com/128/10090/10090288.png" alt="" className="w-5 h-5" />
               </a>
               
