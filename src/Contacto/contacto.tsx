@@ -143,7 +143,7 @@ export default function Contacto() {
               </div>
 
               <div>
-                <label className="font-medium">Mensage</label>
+                <label className="font-medium">Mensaje</label>
                 <textarea
                   required
                   name="mensage"

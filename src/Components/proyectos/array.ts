@@ -15,7 +15,7 @@ export const proyectos = [
          "https://cdn.worldvectorlogo.com/logos/redux.svg", "https://cdn.worldvectorlogo.com/logos/nodejs.svg", "https://cdn.worldvectorlogo.com/logos/express-109.svg",
         "https://www.vectorlogo.zone/logos/sequelizejs/sequelizejs-icon.svg"  ],
         enlace: "https://github.com/evinlopez90/PI-Pokemon-main",
-        color: 'bg-red-900',
+        color: 'bg-gray-900',
         deploy: ''
 
     },

@@ -58,7 +58,7 @@ export default function Nav() {
     
   return (
    <>
-    <aside className={`fixed transition-all duration-500  ${nav === true ? 'left-0' : '-left-28'} top-0 border-r-[1px] p-10 w-[110px]  min-h-screen flex flex-col justify-between z-50 ${darkMode === true ? ' border-gray-900' : ' border-gray-300'}  md:left-0`}>
+    <aside className={`fixed transition-all duration-500  ${nav === true ? 'left-0' : '-left-28'} top-0 border-r-[1px] p-10 w-[110px]  min-h-screen flex flex-col justify-between z-50 ${darkMode === true ? 'bg-[#060B10] border-gray-900' : ' bg-white border-gray-300'}  md:left-0`}>
         <a href="">
             <img src="https://cdn-icons-png.flaticon.com/128/9313/9313211.png" alt="logo" />
         </a>

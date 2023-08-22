@@ -20,9 +20,14 @@ function Skill() {
     </div>
     <div className=' w-11/12 ml-8   md:w-4/5  md:ml-10   mt-20    '>
     <div className='w-32 grid grid-cols-2  gap-10 mt-2 ml-5   font-semibold cursor-pointer'>
-        <h1 
+       <aside>
+       <h1 
          onClick={() => setRender(true)} className={`  ${render === true ? 'text-red-500': null }`} >Fontend</h1>
-        <h1 onClick={() => setRender(false)} className={`${render === false ? 'text-red-500': null }`} >Backend</h1>
+       
+       </aside>
+       <aside>
+       <h1 onClick={() => setRender(false)} className={` ${render === false ? 'text-red-500': null }`} >Backend</h1>
+       </aside>
       </div>
      {
       render === true? <Frondend /> : null
