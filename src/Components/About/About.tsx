@@ -2,10 +2,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux-toolki/stora";
 import educacion from "../../Imagenes/educacion.png"
-import maleta from "../../Imagenes/maleta.png"
+
 import { MdUploadFile } from "react-icons/md";
 import { BsLink } from "react-icons/bs";
-import { Link } from "react-scroll";
+
 import cv from '../../assets/Resumen.pdf'
 import certificado from '../../assets/Certificado.pdf'
 function About() {
