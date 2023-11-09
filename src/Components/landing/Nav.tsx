@@ -1,74 +1,82 @@
 
-
 import { Link } from "react-scroll";
-
-import { BsMoonStars, BsSun } from "react-icons/bs";
-import { setTheme } from "../../redux-toolki/Slice";
- import { AppDispatch, RootState } from '../../redux-toolki/stora';
- import { useDispatch, useSelector } from 'react-redux';
+import {AiOutlineHome, AiOutlineUser, AiOutlineCustomerService}  from "react-icons/ai"
+import { CgMenuGridR } from "react-icons/cg";
+import {  RootState } from '../../redux-toolki/stora';
+ import {  useSelector } from 'react-redux';
+ 
+ import { MdOutlineHomeRepairService, MdOutlineContactPhone } from "react-icons/md";
+import { GiSkills } from "react-icons/gi";
 import { useState } from "react";
-
-
+import { SiKnowledgebase } from "react-icons/si";
 export default function Nav() {
 
-    const darkMode = useSelector((state: RootState) => state.detalle.value);
+  
 
     const navigation = [
         {
             
             name: 'Home',
-            icon: 'https://cdn-icons-png.flaticon.com/128/5687/5687496.png'
-            ,
+            
+            
         },
         {
             
             name: 'Acerca de mí',
-            icon: 'https://cdn-icons-png.flaticon.com/128/10276/10276686.png'
-            ,
+          
+          
         },
         {
             
             name: 'Habilidades',
-            icon: 'https://cdn-icons-png.flaticon.com/128/8859/8859789.png'
-
-            ,
+           
         },
         {
             
             name: 'Servicios',
-            icon: 'https://cdn-icons-png.flaticon.com/128/4814/4814961.png'
+           
         },
         {
             
             name: 'Proyectos',
-            icon: 'https://cdn-icons-png.flaticon.com/128/9805/9805668.png'
+           
+        },
+        {
+            
+            name: 'Experiencia',
+            
         },
         {
             
             name: 'Contacto',
-            icon: 'https://cdn-icons-png.flaticon.com/128/8770/8770989.png'
-        }
+            
+        },
+        
     ]
-    const dispatch = useDispatch<AppDispatch>();
-    const setMode  = (value: boolean) => {
-        dispatch(setTheme(value))
-     }
-
+    
+    const darkMode = useSelector((state: RootState) => state.detalle.value);
      const [nav, setnav] = useState<boolean>(false)
     
   return (
    <>
-    <aside className={`fixed transition-all duration-500  ${nav === true ? 'left-0' : '-left-28'} top-0 border-r-[1px] p-10 w-[110px]  min-h-screen flex flex-col justify-between z-50 ${darkMode === true ? 'bg-[#060B10] border-gray-900' : ' bg-white border-gray-300'}  md:left-0`}>
-        <a href="">
-            <img src="https://cdn-icons-png.flaticon.com/128/9313/9313211.png" alt="logo" />
+    <aside className={`fixed transition-all duration-500   ${nav === true ? 'left-0' : '-left-28'} top-0  p-10 md:w-[110px]  min-h-screen flex flex-col gap-28 z-50   md:left-0`}>
+        <a href="" className={`w-16 -m-2 rounded-[10px] flex ${darkMode === true ? "bg-gray-900 text-white"  : 'bg-gray-200'} justify-center items-center`}>
+            <h1 className="text-[30px] m-0 font-extrabold">E<span className="text-red-500">.</span></h1>
         </a>
         <nav className=''>
-        <ul className="flex flex-col gap-y-4">
+        <ul className={`flex flex-col justify-center items-center mt-20 md:mt-0 rounded-[20px] gap-y-4 bg-gray-900 h-[340px] w-12 `}>
                             {
                                 navigation.map((item, idx) => (
                                     <li key={idx}>
-                                        <Link to={item.name} spy={true}  smooth={true} duration={500}  className="relative  flex items-center justify-center  text-gray-600 p-1 rounded-lg  hover:bg-gray-50 active:bg-gray-100 duration-150 group">
-                                           <img src={item.icon} alt={item.name} className="" />
+                                        <Link to={item.name} spy={true} onClick={() => setnav(false)} smooth={true} duration={500}  className="relative w-8 h-8  p-2   flex items-center justify-center  text-gray-100 bg-gray-700 rounded-[15px]  hover:bg-transparent active:bg-gray-100  duration-150 group">
+                                           {item.name === "Home" ? <AiOutlineHome/> : null}
+                                           {item.name === "Acerca de mí" ? <AiOutlineUser/> : null}
+                                           {item.name === "Habilidades" ? <GiSkills/> : null}
+                                           {item.name === "Servicios" ? <AiOutlineCustomerService/> : null}
+                                           {item.name === "Proyectos" ? <MdOutlineHomeRepairService/> : null}
+                                           {item.name === "Contacto" ? <MdOutlineContactPhone/> : null}
+                                           {item.name === "Experiencia" ? <SiKnowledgebase/> : null}
+                                           
                                             <span className="absolute left-14 p-1 px-1.5 rounded-md whitespace-nowrap text-xs text-white bg-gray-800 hidden group-hover:inline-block group-focus:hidden duration-150">
                                                 {item.name}
                                             </span>
@@ -79,23 +87,12 @@ export default function Nav() {
                         </ul>
        
         </nav>
-        <div>
-        { darkMode === false ?
-                        <div onClick={() => setMode(true)} className="flex flex-col  items-center  cursor-pointer text-white rounded-full bg-gray-900 p-2 ring-1 ring-white/10  ">
-                        <BsSun/>
-                       </div> : null
-                        }
-                        {
-                      darkMode === true ?
-                       <div onClick={() => setMode(false)} className=" flex flex-col  items-center  cursor-pointer text-white rounded-full bg-gray-900 p-2 ring-1 ring-white/10  ">
-                        <BsMoonStars/>
-                        </div>  : null
-                       }
-        </div>
+       
     </aside>
-    <div className={`fixed top-10 transition-all duration-500 md:hidden  ${nav === true ? 'left-[120px]' : 'left-10' }`} onClick={() => setnav(!nav) } >
-    <img src="https://cdn-icons-png.flaticon.com/128/9441/9441572.png"  alt="" className={`w-8 h-8  `} />
+    <div className={`fixed top-10 text-[45px] transition-all duration-500 md:hidden ${darkMode === true ? "text-red-500": null}  ${nav === true ? 'hidden' : 'left-10' }`} onClick={() => setnav(true) } >
+      <CgMenuGridR/>
     </div>
+    
    </>
   )
 }

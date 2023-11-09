@@ -12,7 +12,7 @@ export default function Backend() {
 
   let backArray:Back[]  = [
     {
-      name: "Express js",
+      name: "Express",
       nivel: "Intermedio",
       porcentage: 'w-[65%]'
     },
@@ -22,7 +22,7 @@ export default function Backend() {
       porcentage: 'w-[50%]'
     },
     {
-      name: "Node Js",
+      name: "NodeJs",
       nivel: "Avanzado",
       porcentage: 'w-[75%]'
     },

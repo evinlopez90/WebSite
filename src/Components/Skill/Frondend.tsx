@@ -14,17 +14,17 @@ export default function Frondend() {
 
   let FrondArray:Frond[]  = [
     {
-      name: "Node js",
+      name: "Nodejs",
       nivel: "Avanzado",
       porcentage: 'w-[75%]'
     },
     {
-      name: "React js",
+      name: "Reactjs",
       nivel: "Avanzado",
       porcentage: 'w-[85%]'
     },
     {
-      name: "Next js",
+      name: "Nextjs",
       nivel: "Medio",
       porcentage: 'w-[50%]'
     },
@@ -39,7 +39,7 @@ export default function Frondend() {
       porcentage: 'w-[80%]'
     },
     {
-      name: "Redux Toolki",
+      name: "Redux Toolkit",
       nivel: "Medio",
       porcentage: 'w-[50%]'
     },
@@ -57,7 +57,17 @@ export default function Frondend() {
       name: "Css",
       nivel: "Intermedio",
       porcentage: 'w-[70%]'
-    }
+    },
+    {
+      name: "VueJs",
+      nivel: "Basico",
+      porcentage: 'w-[25%]'
+    },
+    {
+      name: "Tailwind",
+      nivel: "Intermedio",
+      porcentage: 'w-[70%]'
+    },
   ]
 
   const darkMode = useSelector((state: RootState) => state.detalle.value);

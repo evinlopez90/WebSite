@@ -9,7 +9,7 @@ interface State {
 const initialState: State = {
   detail: false,
   id: 0,
-  value: false
+  value: true
 
 };
 

@@ -6,15 +6,14 @@ import maleta from "../../Imagenes/maleta.png"
 import { MdUploadFile } from "react-icons/md";
 import { BsLink } from "react-icons/bs";
 import { Link } from "react-scroll";
-import cv from '../../assets/cv.pdf'
+import cv from '../../assets/Resumen.pdf'
 import certificado from '../../assets/Certificado.pdf'
 function About() {
 const darkMode = useSelector((state: RootState) => state.detalle.value);
   return (
-   <div className="flex flex-col items-center   gap-20">
-    <header className= {`w-11/12 ml-8 md:w-4/5 md:ml-20   text-[25px]  ${darkMode !== true ? 'text-neutral-900' : 'text-white'}`}>
-      <h1 className="font-bold">Acerca de mí</h1>
-     
+   <div className="flex flex-col items-center   gap-5">
+    <header className= {`w-11/12 ml-8 md:w-4/5 md:ml-20  flex  text-[55px]  ${darkMode !== true ? 'text-neutral-900' : 'text-white'}`}>
+      <h1 className="font-bold">Acerca de mí<span className=" m-0  text-red-500">.</span> </h1>
     </header>
     <div className=" flex flex-col md:ml-3   md:grid  md:grid-cols-2 ">
     <aside className="md:mx-40">
@@ -41,7 +40,7 @@ Mi pasión por el desarrollo web comenzó hace mas de un año, y cada día disfr
 </a>
     </div>
 </aside>
-<aside className={`flex flex-col m-10 md:m-0  md:grid md:grid-cols-2 gap-5 md:mr-40`}>
+<aside className={`flex ml-9 md:ml-0 md:justify-center `}>
   <div className={`text-white rounded-md bg-gray-900 p-8 transition-all hover:opacity-90`}>
    <div className="">
    <div className="w-14 h-14 flex items-center rounded-md bg-white/5 p-2 ring-1 ring-white/10">
@@ -58,20 +57,7 @@ Mi pasión por el desarrollo web comenzó hace mas de un año, y cada día disfr
    </div>
   </div>
 
-  <div className={`text-white rounded-md bg-red-500 p-8 transition-all hover:opacity-90`}>
-   <div className="">
-   <div className="w-14 h-14 flex items-center rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-   <img src={maleta} alt="flaticon" className=" my-5" />
-   </div>
-   <h1 className={`text-[17px] text-black font-semibold mt-2`}>Experiencia</h1>
-   <p className={`text-[12px] w-48 my-2 text-gray-900`}>He participado en diversos proyectos universitarios que me han permitido desarrollar habilidades en trabajo en equipo, resolución de problemas y comunicación efectiva</p>
-   <Link  to='Proyectos' spy={true}  smooth={true} duration={500} 
-     className="text-[12px] cursor-pointer text-white flex items-center transition-all hover:ml-2">
-    Ver proyectos
-    <span className="m-2 mt-3 text-blue-500"><BsLink/></span>
-   </Link>
-   </div>
-  </div>
+  
 
 </aside>
     </div>

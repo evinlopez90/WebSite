@@ -11,22 +11,22 @@ function Skill() {
    const [render, setRender ] = useState(true)
 
   return (
-   <Element name='Skill'  className={`w-full flex flex-col items-center  ${darkMode === true ? 'text-white': null }`}>
-    <div className=' w-4/5 md:ml-20  '>
-    <h2 className={`text-[25px] font-bold ${darkMode === true ? 'text-white': null }`}>Habilidades</h2>    
+   <Element name='Skill'  className={` md:w-full flex flex-col items-center  ${darkMode === true ? 'text-white': null }`}>
+    <div className=' md:w-full ml-10 md:ml-20   '>
+    <h2 className={`text-[55px] font-bold ${darkMode === true ? 'text-white': null }`}>Habilidades<span className=" m-0  text-red-500">.</span> </h2>    
       
      
    
     </div>
-    <div className=' w-11/12 ml-8   md:w-4/5  md:ml-10   mt-20    '>
-    <div className='w-32 grid grid-cols-2  gap-10 mt-2 ml-5   font-semibold cursor-pointer'>
-       <aside>
-       <h1 
-         onClick={() => setRender(true)} className={`  ${render === true ? 'text-red-500': null }`} >Fontend</h1>
+    <div className=' w-11/12 ml-8   md:w-full  md:ml-10   mt-20    '>
+    <div className='w-44 flex   gap-5 mt-2 ml-5   font-semibold cursor-pointer'>
+       <aside className=' p-2 bg-gray-900 flex justify-center  items-center text-white w-28 h-8 rounded'>
+       <span
+         onClick={() => setRender(true)} className={` text-[12px]  ${render === true ? 'text-red-500': null }`} >Frontend</span>
        
        </aside>
-       <aside>
-       <h1 onClick={() => setRender(false)} className={` ${render === false ? 'text-red-500': null }`} >Backend</h1>
+       <aside className=' p-2 bg-gray-900 flex justify-center  items-center text-white w-28 h-8 rounded'>
+       <span onClick={() => setRender(false)} className={` text-[12px] ${render === false ? 'text-red-500': null }`} >Backend</span>
        </aside>
       </div>
      {

@@ -5,28 +5,34 @@ function Servicios() {
 
     const darkMode = useSelector((state: RootState) => state.detalle.value);
   return (
-    <div className=" w-11/12 flex flex-col gap-16">
-      <dd className={`w-4/5 ml-14 md:ml-28 text-black flex flex-col `}>
-       <h1 className={`text-[25px]  font-bold ${darkMode === true ? 'text-white': null}`}>Servicios</h1>
+    <div className=" w-full  flex flex-col gap-16">
+      <div className={`w-full  text-black`}>
+       <h1 className={`text-[55px] ml-14 font-bold ${darkMode === true ? 'text-white': null}`}>Servicios<span className=" m-0  text-red-500">.</span> </h1>
        
-      </dd>
-      <dd className={` w-4/5 md:ml-28 flex flex-col  md:flex md:flex-row   m-10 gap-7`}>
-       <aside className={`w-64 h-56 hover:opacity-80 rounded-md  p-8 bg-red-500  ${darkMode === true ? '': ''}`}>
-       <img src="https://cdn-icons-png.flaticon.com/128/10223/10223243.png" alt="" className="w-12 h-12" />
-        <h1 className={`text-[17px] pt-2 font-semibold ${darkMode === true ? '': null}`}>FontEnd Developer</h1>
-        <p className="text-[12px] text-gray-800 mt-1">Con experiencia en la creación de interfaces de usuario atractivas y funcionales. Con un enfoque meticuloso en el diseño responsive y la usabilidad.</p>
+      </div>
+      <div className={` w-full  ml-16  flex flex-col  md:flex md:flex-row    m-10 gap-10`}>
+       <aside className={` w-[340px] md:w-96 md:h-72  hover:opacity-80 rounded-md  p-8 bg-gray-900  ${darkMode === true ? '': ''}`}>
+       <img src="https://cdn-icons-png.flaticon.com/128/11514/11514025.png" alt="" className="w-12  h-12" />
+        <h1 className={`text-[20px] pt-2 text-white font-semibold ${darkMode === true ? '': null}`}>Desarrollo web</h1>
+        <p className="text-[13px] text-gray-500 mt-1">Soy un desarrollador web full stack con  experiencia en la creación de sitios web de alto rendimiento y hermosos diseños. Me apasiona la tecnología y estoy listo para llevar tu visión en línea. Aquí tienes un vistazo de las tegnologias que mas uso:</p>
+        <div className='text-[13px] flex mt-2 gap-2'>
+          <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>React</span>
+          <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>Vue</span>
+          <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>Mongodb</span>
+          <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>PostgresSQL</span>
+        </div>
        </aside>
-       <aside  className={`w-64 h-56  hover:opacity-80 rounded-md p-8 bg-yellow-400  ${darkMode === true ? '': ''}`}>
-       <img src="https://cdn-icons-png.flaticon.com/128/9495/9495731.png" alt="" className="w-12 h-12" />
-        <h1 className={`text-[17px] pt-2 font-semibold ${darkMode === true ? '': null}`}>BackEnd Developer</h1>
-        <p className="text-[12px] text-gray-700 mt-1">Dedicado a construir la infraestructura detrás de las aplicaciones web. Mi enfoque se centra en la seguridad, escalabilidad y rendimiento.</p>
-       </aside>
-       <aside  className={`w-64 h-56 hover:opacity-80 rounded-md bg-orange-400  p-8  ${darkMode === true ? '': ''}`}>
+       
+       <aside  className={`w-[340px] md:w-96 md:h-72 hover:opacity-80 rounded-md bg-gray-900  p-8  ${darkMode === true ? '': ''}`}>
        <img src="https://cdn-icons-png.flaticon.com/128/9321/9321186.png" alt="" className="w-12 h-12" />
-        <h1 className={`text-[17px] pt-2 font-semibold ${darkMode === true ? '': null}`}>Desarrollo Movil</h1>
-        <p className="text-[12px] text-gray-700 mt-1"> tengo el privilegio de dar vida a ideas y conceptos a través de aplicaciones interactivas y funcionales en dispositivos móviles.</p>
+        <h1 className={`text-[20px] pt-2 text-white font-semibold ${darkMode === true ? '': null}`}>Desarrollo Movil</h1>
+        <p className="text-[13px] text-gray-500 mt-1">Me apasiona el mundo del desarrollo móvil. Aunque no tengo experiencia laboral, he invertido tiempo y esfuerzo en aprender las habilidades necesarias para crear aplicaciones móviles de alta calidad.</p>
+        <div className='text-[13px] flex mt-5 gap-2'>
+          <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>React-native</span>
+          <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>NativeScript</span>
+        </div>
        </aside>
-      </dd>
+      </div>
     </div>
   )
 }
