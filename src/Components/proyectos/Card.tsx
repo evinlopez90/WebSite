@@ -23,54 +23,39 @@ const Card: React.FunctionComponent<Props> =  ({nombre, imagen, subdescripcion, 
 
  return (
    
-<div className={`  md:w-[456px]  bg-transparent   hover:opacity-90  rounded-sm `}>
+  <div className={` w-[310px] ${darkMode === true ? "text-white" : "text-black" }  md:w-[456px]  bg-transparent   hover:opacity-90  rounded-sm `}>
    <aside className=' -ml-1 m-8 w-full flex justify-center rounded-[10px]    bg-gray-900  p-4 md:p-8'>
    <a className='w-full flex justify-center   relative md:top-8'>
     <img src={imagen} alt="" className='h-44 ' />
    </a>
    </aside>
-   <aside className={` flex flex-col items-center ${darkMode === true ? 'text-white' : 'text-black'} `}>
-   <div>
-   <div>
-   <aside className='flex  ml-6  md:ml-9 w-full items-center justify-between -mt-6'>
-   <h1 className='font-bold text-[23px]'>{nombre}</h1>
-   <div className=" w-2/5 md:w-11/12 mt-5 my-2  md:m-2 "><hr className={`h-px  border-0 ${darkMode === true ? "bg-gray-700" : "bg-gray-300" }`} /></div>
-
-   <div className='flex justify-center gap-2   '>
-   
-        <a href={enlace} target="_blank" rel="noopener noreferrer" className="  flex justify-center cursor-pointer items-center gap-2 rounded-[15px] h-6 text-[24px] bg-transparent m-1  ">
-        <AiFillGithub/>
-        </a>
-        {
-    deploy.length ? <a href={deploy} target="_blank" rel="noopener noreferrer" className=" flex justify-center items-center gap-2 rounded-[15px] h-6 text-[24px] bg-transparent m-1 ">
-    <FiExternalLink />
-   </a> : null
-   }
+   <aside className='text-white h-44 w-full flex flex-col gap-3 '>
+   <div className='flex justify-between'>
+   <h2 className={`${darkMode === true ? "text-white" : "text-black" } font-bold`}>{nombre}</h2>
+   <div className=' w-[200px] text-gray-800'><hr className={`h-px my-3  border-0 ${darkMode === true ? "bg-gray-700" : "bg-gray-300" }`}/></div>
+   <div className='flex gap-2 '>
+   <a href={enlace} target="_blank" rel="noopener noreferrer" className='bg-gray-900 p-1 rounded-full'>
+   <AiFillGithub/>
+   </a>
+    {
+      deploy.length ? <a href={deploy} target="_blank" rel="noopener noreferrer" className='bg-gray-900 p-1 rounded-full'>
+         <FiExternalLink/>
+      </a> : null
+    }
    </div>
-        
-   </aside>
-  
    </div>
-    <div className='ml-8 mt-2'>
-    <div className='flex gap-1'>
+   <div className='flex flex-col gap-4'>
+     <aside className='grid grid-cols-3 gap-2 md:grid-cols-4 '>
       {
         tegnologias && tegnologias.map(t => (
-          <span className='bg-gray-900  text-[13px] text-[#D6D7DD] p-2 rounded-[12px]' key={t}>
-           {t}
+          <span className='flex justify-center items-center text-[13px] text-[#D6D7DD] p-1 rounded-[12px] bg-gray-900 ' key={t}>
+            {t}
           </span>
         ))
       }
-    </div>
-    <a className='m-5  '>
-        <p className='text-gray-700  text-[13px] '>
-            {subdescripcion}
-        </p>
-    </a>
-    </div>
+     </aside>
+     <p className='text-gray-500 text-[14px]'>{subdescripcion}</p>
    </div>
-    
-   
-       
    </aside>
 </div>
 

@@ -6,7 +6,7 @@ import educacion from "../../Imagenes/educacion.png"
 import { MdUploadFile } from "react-icons/md";
 import { BsLink } from "react-icons/bs";
 
-import cv from '../../assets/Resumen.pdf'
+import cv from '../../Imagenes/Cv.pdf'
 import certificado from '../../assets/Certificado.pdf'
 function About() {
 const darkMode = useSelector((state: RootState) => state.detalle.value);

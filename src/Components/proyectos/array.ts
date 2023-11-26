@@ -3,8 +3,34 @@ import pokeIma from "../../Imagenes/pokemon.png"
  import instachrf from '../../Imagenes/Instachef.png'
  import portafolio from '../../Imagenes/Portafolio.png'
  import remind from '../../Imagenes/remind.png'
+ import recetas from "../../Imagenes/recetas.png"
 
 export const proyectos = [
+
+    {
+        nombre: "Recetas",
+        imagen: recetas,
+        video: null,
+        subdescripcion: "Se trata de una página web diseñada para buscar recetas de manera eficiente. Ofrece la posibilidad de filtrar las recetas por tipo de comida, permitiendo la búsqueda por letra inicial, así como por ingredientes específicos. La interfaz de la página es notable por su limpieza y su intuitivo diseño, lo que facilita la navegación y la búsqueda de recetas.",
+        enlace: 'https://github.com/evinlopez90/recetas.git',
+        tegnologias: ["Vuejs",  "Tailwind", "Vuex"],
+        color: 'bg-orange-900',
+        deploy: 'https://recetas-rdgn.vercel.app/'
+    
+    },
+    {
+        nombre: "Instachef",
+        imagen: instachrf,
+        video: null,
+        decriccion: "",
+        subdescripcion: "InstaChef es un restaurante de comidas online, está pensado para que puedas tener la mejor experiencia comprando comida rápida en línea, con una interfaz intuitiva desde la autenticación hasta la pasarela de pagos.",
+        colaboradores: [],
+        enlace: 'https://github.com/FrancoInca/InstaChef-Front.git',
+        tegnologias: ["React ", "Stripe",  "Sequelize", "express", "ReduxToolkit"],
+        color: 'bg-yellow-900',
+        deploy: 'https://insta-chef.vercel.app/'
+    
+    },
     {
         nombre: "AppPokemon",
         imagen: pokeIma,
@@ -33,32 +59,8 @@ export const proyectos = [
     //     deploy: ''
     
     // },
-    {
-        nombre: "Instachef",
-        imagen: instachrf,
-        video: null,
-        decriccion: "",
-        subdescripcion: "InstaChef es un restaurante de comidas online, está pensado para que puedas tener la mejor experiencia comprando comida rápida en línea, con una interfaz intuitiva desde la autenticación hasta la pasarela de pagos.",
-        colaboradores: [],
-        enlace: 'https://github.com/FrancoInca/InstaChef-Front.git',
-        tegnologias: ["React ", "Stripe",  "Sequelize", "express", "ReduxToolkit"],
-        color: 'bg-yellow-900',
-        deploy: 'https://insta-chef.vercel.app/'
     
-    },
-    {
-        nombre: "WebSite",
-        imagen: portafolio,
-        video: null,
-        decriccion: "Mi portafolio web. Explora las diferentes sesiones y conoce todo sobre mi en el mundo del desarrollo de software.",
-        subdescripcion: "Mi portafolio web. Explora las diferentes sesiones y conoce todo sobre mi en el mundo del desarrollo de software.",
-        colaboradores: [],
-        enlace: 'https://github.com/evinlopez90/WebSite.git',
-        tegnologias: ["React",  "ReduxToolkit", "TypeScript"],
-        color: 'bg-orange-900',
-        deploy: 'https://web-site-app.vercel.app/'
     
-    }
 ]
 
 export const movil = [

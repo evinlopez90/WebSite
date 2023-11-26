@@ -1,6 +1,9 @@
 
 import { useSelector } from 'react-redux';
 import { RootState} from '../../redux-toolki/stora';
+import { MdOutlineWeb } from "react-icons/md";
+import { MdOutlineSettingsCell } from "react-icons/md";
+
 function Servicios() {
 
     const darkMode = useSelector((state: RootState) => state.detalle.value);
@@ -11,10 +14,10 @@ function Servicios() {
        
       </div>
       <div className={` w-full  ml-16  flex flex-col  md:flex md:flex-row    m-10 gap-10`}>
-       <aside className={` w-[340px] md:w-96 md:h-72  hover:opacity-80 rounded-md  p-8 bg-gray-900  ${darkMode === true ? '': ''}`}>
-       <img src="https://cdn-icons-png.flaticon.com/128/11514/11514025.png" alt="" className="w-12  h-12" />
+       <aside className={` text-[45px] w-[340px] md:w-[500px] md:h-72 text-white  hover:opacity-80 rounded-md  p-8 bg-gray-900  ${darkMode === true ? '': ''}`}>
+       <MdOutlineWeb  />
         <h1 className={`text-[20px] pt-2 text-white font-semibold ${darkMode === true ? '': null}`}>Desarrollo web</h1>
-        <p className="text-[13px] text-gray-500 mt-1">Soy un desarrollador web full stack con  experiencia en la creación de sitios web de alto rendimiento y hermosos diseños. Me apasiona la tecnología y estoy listo para llevar tu visión en línea. Aquí tienes un vistazo de las tegnologias que mas uso:</p>
+        <p className="text-[13px] text-gray-600 mt-1">Soy un desarrollador web full stack con  experiencia en la creación de sitios web de alto rendimiento y hermosos diseños. Me apasiona la tecnología y estoy listo para llevar tu visión en línea. Aquí tienes un vistazo de las tegnologias que mas uso:</p>
         <div className='text-[13px] flex mt-2 gap-2'>
           <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>React</span>
           <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>Vue</span>
@@ -23,10 +26,10 @@ function Servicios() {
         </div>
        </aside>
        
-       <aside  className={`w-[340px] md:w-96 md:h-72 hover:opacity-80 rounded-md bg-gray-900  p-8  ${darkMode === true ? '': ''}`}>
-       <img src="https://cdn-icons-png.flaticon.com/128/9321/9321186.png" alt="" className="w-12 h-12" />
+       <aside  className={`w-[340px] text-[45px] md:w-[500px] md:h-72 hover:opacity-80 rounded-md bg-gray-900 text-white  p-8  ${darkMode === true ? '': ''}`}>
+       <MdOutlineSettingsCell />
         <h1 className={`text-[20px] pt-2 text-white font-semibold ${darkMode === true ? '': null}`}>Desarrollo Movil</h1>
-        <p className="text-[13px] text-gray-500 mt-1">Me apasiona el mundo del desarrollo móvil. Aunque no tengo experiencia laboral, he invertido tiempo y esfuerzo en aprender las habilidades necesarias para crear aplicaciones móviles de alta calidad.</p>
+        <p className="text-[13px] text-gray-600 mt-1">Me apasiona el mundo del desarrollo móvil. Aunque no tengo experiencia laboral, he invertido tiempo y esfuerzo en aprender las habilidades necesarias para crear aplicaciones móviles de alta calidad.</p>
         <div className='text-[13px] flex mt-5 gap-2'>
           <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>React-native</span>
           <span className='bg-gray-800  rounded-[9px] text-white p-[6px] '>NativeScript</span>
