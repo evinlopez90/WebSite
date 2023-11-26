@@ -1,7 +1,6 @@
 
 import pokeIma from "../../Imagenes/pokemon.png"
  import instachrf from '../../Imagenes/Instachef.png'
- import portafolio from '../../Imagenes/Portafolio.png'
  import remind from '../../Imagenes/remind.png'
  import recetas from "../../Imagenes/recetas.png"
 
