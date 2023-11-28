@@ -6,7 +6,7 @@ import { Link, Element } from "react-scroll";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-import imaHome from "../../Imagenes/R.png";
+import imaHome from "../../Imagenes/about.jpg";
 import { setTheme } from "../../redux-toolki/Slice";
 import { AppDispatch, RootState } from "../../redux-toolki/stora";
 import { useDispatch, useSelector } from "react-redux";
